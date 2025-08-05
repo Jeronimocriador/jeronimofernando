@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeronix - Documentos Profissionais com Impacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0a0a0a',
+                        'dark-card': '#1a1a1a',
+                        'dark-gray': '#2a2a2a',
+                        'neon-yellow': '#FFD700',
+                        'bright-yellow': '#FFED4E'
+                    },
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'monospace'],
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(255, 215, 0, 0.3)',
+                        'neon-strong': '0 0 30px rgba(255, 215, 0, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glow-text {
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        .hover-glow:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+            transform: translateY(-2px);
+        }
+        .neon-border {
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #FFD700, #FFED4E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-white font-poppins overflow-x-hidden">
+    <!-- Header Fixo -->
+    <header class="fixed top-0 w-full bg-dark-bg/95 backdrop-blur-sm border-b border-dark-gray z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <h1 class="text-2xl md:text-3xl font-orbitron font-bold">
+                        <span class="text-white">Jeron</span><span class="text-neon-yellow glow-text">ix</span>
+                    </h1>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-300 hover:text-neon-yellow transition duration-300">Início</a>
+                    <a href="#servicos" class="text-gray-300 hover:text-neon-yellow transition duration-300">Serviços</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-neon-yellow transition duration-300">Sobre</a>
+                    <a href="#contacto" class="text-gray-300 hover:text-neon-yellow transition duration-300">Contacto</a>
+                </nav>
+                
+                <!-- Botão CTA -->
+                <a href="https://wa.me/244975415718?text=Olá%20Jerónimo,%20quero%20falar%20contigo!" 
+                   target="_blank"
+                   class="hidden md:inline-flex bg-neon-yellow text-black px-6 py-2 rounded-full font-semibold hover:bg-bright-yellow transition duration-300 hover-glow">
+                    Fala Comigo
+                </a>
+                
+                <!-- Menu Mobile -->
+                <button id="mobile-menu-btn" class="md:hidden text-neon-yellow">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Menu Mobile Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-dark-gray mt-4 pt-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#inicio" class="text-gray-300 hover:text-neon-yellow transition duration-300">Início</a>
+                    <a href="#servicos" class="text-gray-300 hover:text-neon-yellow transition duration-300">Serviços</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-neon-yellow transition duration-300">Sobre</a>
+                    <a href="#contacto" class="text-gray-300 hover:text-neon-yellow transition duration-300">Contacto</a>
+                    <a href="https://wa.me/244975415718?text=Olá%20Jerónimo,%20quero%20falar%20contigo!" 
+                       target="_blank"
+                       class="bg-neon-yellow text-black px-6 py-2 rounded-full font-semibold text-center hover:bg-bright-yellow transition duration-300 mt-4">
+                        Fala Comigo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Secção de Apresentação -->
+    <section id="inicio" class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Avatar -->
+                <div class="flex-shrink-0">
+                    <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-dark-gray to-dark-card neon-border flex items-center justify-center shadow-neon">
+                        <div class="w-40 h-40 md:w-56 md:h-56 rounded-full bg-dark-card flex items-center justify-center">
+                            <span class="text-4xl md:text-6xl font-orbitron font-bold text-neon-yellow glow-text">JF</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Conteúdo -->
+                <div class="flex-1 text-center lg:text-left">
+                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-orbitron font-bold mb-6 leading-tight">
+                        Sou <span class="gradient-text">Jerónimo Fernando</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl text-gray-300 mb-4 leading-relaxed">
+                        Especialista em criação de <span class="text-neon-yellow font-semibold">documentos profissionais</span> com design e impacto.
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed">
+                        Se precisas de um currículo, slide ou cartão de visita que impressione, estás no lugar certo.
+                    </p>
+                    
+                    <!-- Botões de Ação -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#servicos" 
+                           class="bg-neon-yellow text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-bright-yellow transition duration-300 hover-glow">
+                            Ver Serviços
+                        </a>
+                        <a href="https://wa.me/244975415718?text=Quero%20um%20currículo%20profissional!" 
+                           target="_blank"
+                           class="border-2 border-neon-yellow text-neon-yellow px-8 py-4 rounded-full font-semibold text-lg hover:bg-neon-yellow hover:text-black transition duration-300">
+                            Pedir Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços em Destaque -->
+    <section id="servicos" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-dark-bg to-dark-card">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-orbitron font-bold mb-4">
+                    Serviços <span class="gradient-text">Especializados</span>
+                </h3>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Transformo as tuas ideias em documentos que fazem a diferença
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-dark-card neon-border rounded-2xl p-8 hover-glow transition duration-300 group">
+                    <div class="text-neon-yellow text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-file-user"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-white">Currículos Profissionais</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        CVs modernos e impactantes que destacam o teu perfil e abrem portas no mercado de trabalho.
+                    </p>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="bg-dark-card neon-border rounded-2xl p-8 hover-glow transition duration-300 group">
+                    <div class="text-neon-yellow text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-presentation"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-white">Apresentações PowerPoint</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Slides visuais e profissionais que captam a atenção e transmitem a tua mensagem com impacto.
+                    </p>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div class="bg-dark-card neon-border rounded-2xl p-8 hover-glow transition duration-300 group">
+                    <div class="text-neon-yellow text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-white">Documentos Digitais</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Formatação profissional de textos, relatórios e documentos com layout impecável.
+                    </p>
+                </div>
+                
+                <!-- Serviço 4 -->
+                <div class="bg-dark-card neon-border rounded-2xl p-8 hover-glow transition duration-300 group">
+                    <div class="text-neon-yellow text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-white">Cartões de Visita</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Designs elegantes e memoráveis que representam a tua marca pessoal ou empresarial.
+                    </p>
+                </div>
+                
+                <!-- Serviço 5 -->
+                <div class="bg-dark-card neon-border rounded-2xl p-8 hover-glow transition duration-300 group md:col-span-2 lg:col-span-1">
+                    <div class="text-neon-yellow text-4xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-white">IA Criativa</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Uso inteligência artificial para criar textos e designs únicos e personalizados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vantagens -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-bg">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-orbitron font-bold mb-4">
+                    Porquê escolher a <span class="gradient-text">Jeronix</span>?
+                </h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Vantagem 1 -->
+                <div class="flex items-start space-x-4 group">
+                    <div class="flex-shrink-0 w-12 h-12 bg-neon-yellow/20 rounded-full flex items-center justify-center group-hover:bg-neon-yellow/30 transition duration-300">
+                        <i class="fas fa-brain text-neon-yellow text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2 text-white">Criatividade com IA</h4>
+                        <p class="text-gray-400">Uso ferramentas de inteligência artificial para criar conteúdo único e personalizado.</p>
+                    </div>
+                </div>
+                
+                <!-- Vantagem 2 -->
+                <div class="flex items-start space-x-4 group">
+                    <div class="flex-shrink-0 w-12 h-12 bg-neon-yellow/20 rounded-full flex items-center justify-center group-hover:bg-neon-yellow/30 transition duration-300">
+                        <i class="fas fa-bolt text-neon-yellow text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2 text-white">Entregas Rápidas</h4>
+                        <p class="text-gray-400">Trabalho com prazos apertados sem comprometer a qualidade do resultado final.</p>
+                    </div>
+                </div>
+                
+                <!-- Vantagem 3 -->
+                <div class="flex items-start space-x-4 group">
+                    <div class="flex-shrink-0 w-12 h-12 bg-neon-yellow/20 rounded-full flex items-center justify-center group-hover:bg-neon-yellow/30 transition duration-300">
+                        <i class="fas fa-star text-neon-yellow text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2 text-white">Design Profissional</h4>
+                        <p class="text-gray-400">Cada projeto é tratado com atenção aos detalhes e padrões de qualidade elevados.</p>
+                    </div>
+                </div>
+                
+                <!-- Vantagem 4 -->
+                <div class="flex items-start space-x-4 group">
+                    <div class="flex-shrink-0 w-12 h-12 bg-neon-yellow/20 rounded-full flex items-center justify-center group-hover:bg-neon-yellow/30 transition duration-300">
+                        <i class="fab fa-whatsapp text-neon-yellow text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2 text-white">Atendimento Direto</h4>
+                        <p class="text-gray-400">Comunicação rápida e eficiente via WhatsApp para esclarecer dúvidas e acompanhar o projeto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção de Contacto -->
+    <section id="contacto" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-dark-bg to-dark-card">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-12">
+                <h3 class="text-3xl md:text-4xl font-orbitron font-bold mb-4">
+                    Vamos <span class="gradient-text">Trabalhar Juntos</span>
+                </h3>
+                <p class="text-xl text-gray-400 mb-8">
+                    Pronto para criar documentos que fazem a diferença?
+                </p>
+            </div>
+            
+            <!-- Informações de Contacto -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- WhatsApp -->
+                <div class="bg-dark-card neon-border rounded-2xl p-8 hover-glow transition duration-300">
+                    <div class="text-green-400 text-3xl mb-4">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">WhatsApp</h4>
+                    <a href="tel:+244975415718" class="text-gray-400 hover:text-neon-yellow transition duration-300">
+                        +244 975 415 718
+                    </a>
+                </div>
+                
+                <!-- Email -->
+                <div class="bg-dark-card neon-border rounded-2xl p-8 hover-glow transition duration-300">
+                    <div class="text-neon-yellow text-3xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">E-mail</h4>
+                    <a href="mailto:jeronimofernandolg@gmail.com" class="text-gray-400 hover:text-neon-yellow transition duration-300 break-all">
+                        jeronimofernandolg@gmail.com
+                    </a>
+                </div>
+            </div>
+            
+            <!-- CTA Principal -->
+            <div class="bg-gradient-to-r from-neon-yellow/10 to-bright-yellow/10 neon-border rounded-3xl p-8 md:p-12">
+                <h4 class="text-2xl md:text-3xl font-orbitron font-bold mb-4 text-white">
+                    Queres um currículo em 24h?
+                </h4>
+                <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Não percas mais oportunidades. Cria um currículo profissional que te destaca da concorrência.
+                </p>
+                <a href="https://wa.me/244975415718?text=Olá%20Jerónimo!%20Quero%20um%20currículo%20profissional%20em%2024h.%20Podes%20ajudar-me?" 
+                   target="_blank"
+                   class="inline-flex items-center bg-neon-yellow text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-bright-yellow transition duration-300 hover-glow shadow-neon-strong">
+                    <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                    Clica Aqui!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-dark-gray py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-4">
+                <h5 class="text-2xl font-orbitron font-bold">
+                    <span class="text-white">Jeron</span><span class="text-neon-yellow glow-text">ix</span>
+                </h5>
+                <p class="text-gray-400 mt-2">Documentos Profissionais com Impacto</p>
+            </div>
+            
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://wa.me/244975415718" target="_blank" class="text-gray-400 hover:text-green-400 transition duration-300">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                </a>
+                <a href="mailto:jeronimofernandolg@gmail.com" class="text-gray-400 hover:text-neon-yellow transition duration-300">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+                <a href="tel:+244975415718" class="text-gray-400 hover:text-neon-yellow transition duration-300">
+                    <i class="fas fa-phone text-2xl"></i>
+                </a>
+            </div>
+            
+            <p class="text-gray-500 text-sm">
+                © 2024 Jeronix. Todos os direitos reservados. | Criado por Jerónimo Fernando
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Fechar menu mobile se estiver aberto
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-dark-bg');
+                header.classList.remove('bg-dark-bg/95');
+            } else {
+                header.classList.remove('bg-dark-bg');
+                header.classList.add('bg-dark-bg/95');
+            }
+        });
+
+        // Animação de entrada dos elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animação aos cartões de serviços
+        document.querySelectorAll('.hover-glow').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96a778bbf7bc72ee',t:'MTc1NDQwOTI1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
